@@ -1,0 +1,310 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgba(179, 171, 171, 0.952);
+    color : rgb(23, 21, 21);
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.header{
+    margin: 0;
+    padding: 30px;
+    background-color: red;
+    color:antiquewhite;
+    text-transform: uppercase;
+    -webkit-text-stroke: 100%;
+    text-shadow:  0.25rem 0.25rem 0.7rem black;
+    /* text-align: center; */
+    font-weight: 800;
+    box-sizing: border-box;
+    width: 100%
+    display : flex;
+
+
+}
+
+button{
+     width : 2em;
+     background-color: black;
+     color: yellow; 
+}
+
+
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top : 1.25rem;
+    width : 100%
+}
+
+.header h1,h6{
+    text-align: center;
+}
+
+.newscontent{
+    background-color: rgb(245, 243, 243);
+    margin: 1.875rem;
+    padding: 1.375rem;
+    display : flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+img{
+    width: 100%;            /*to make all images responsive*/
+    box-sizing: border-box;
+    border: 0.43rem solid rgba(124, 155, 207, 0.543);
+    border-radius: 7px;
+
+}
+
+.sidebar{
+    background-color: rgba(184, 217, 236, 0.952);
+    margin : 1.875re;
+    display : flex;
+    flex-direction: column;
+   
+} 
+
+.pins{
+
+    margin:1.875rem;   
+    padding:1.370rem;
+    background-color: rgba(231, 232, 235, 0.952);
+}
+
+.newsheading{
+   margin :0.31rem;
+   padding: 0.125em;
+   
+}
+
+.articlecontent{
+    margin: 0.31rem;
+    padding : 0.125rem;
+    font-weight: 500;
+
+}
+
+.articlebig{
+    /* margin: 30px ;  */
+    padding: 0.125rem;
+}
+
+.articlesmall{
+    /* margin: 30px; */
+    padding: 0.125rem;
+
+
+}
+
+.articlemedium{
+    /* margin: 30px; */
+    padding: 0.125rem;
+}
+
+
+.footer{
+    background-color: rgb(0, 0, 0);
+    color : azure;
+    margin: 0;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;   
+    width : 100% ;
+
+}
+
+
+.footeritems{
+    text-align: center;
+    margin: 0px;
+    /* background-color: aqua; */
+    padding: 0.125rem;
+    box-sizing: border-box;
+    display : flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    
+}
+
+.footerlinks ul {
+    list-style-type: none;
+    
+}
+
+
+.footerlinks{ 
+    /* background-color: blueviolet; */
+    margin : 0.3125rem;
+    
+}
+
+
+.footerlinksbottom{    
+    box-sizing: border-box;
+    text-align :center;
+    /* background-color: chartreuse; */
+    margin :1.875rem;
+    display : flex;
+    flex-direction: column;
+   
+}
+
+
+.footerlinksbottom div{
+    
+    /* background-color: brown; */
+    margin: 1.25rem;
+    display: flex;
+    justify-content :space-evenly;
+
+}
+
+a {
+    color :white;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    color: red ;
+}
+
+a:visited{
+    color :blue;
+} 
+
+a:active{
+    color:khaki;
+}
+
+
+/*           media queries for small mobiles      */
+
+@media screen and (min-width :259px) and (max-width: 320px){
+    .container{
+        flex-direction: column;
+    }
+    
+    .newsheading{
+        font-size: 0.75em;
+    }
+
+    .articlecontent{
+        font-size: 0.75em;
+    }
+
+    .footer{
+        font-size: 0.75em;
+    }
+    
+    .navbar a {
+        font-size: 0.25em;
+    }
+
+    #search{
+        size : 2;
+     }
+}
+
+
+/* media queries for mobiles */
+
+@media screen and (min-width:520px){
+    .container{
+        flex-direction: column;
+
+     }
+    .newscontent{
+        display:flex;
+        flex-direction: column;
+        
+     }
+    .navbar a {
+        font-size:0.25rem;
+    }
+
+    #search{
+        size: 4;
+     }
+}
+
+/* media queries for tablets  */
+@media  screen and (min-width:520px) and (max-width:831px) {
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .newscontent{
+        box-sizing: border-box;
+        /* flex-wrap: wrap ; */
+        flex: 3;
+        margin-right: 1rem;
+    }
+
+    .sidebar{
+        box-sizing: border-box;
+        flex: 1;
+    }
+
+    hr{
+        visibility: hidden;
+     }
+
+    }
+
+    .navbar a {
+       font-size:1.25rem;
+   }
+}
+
+/* media queries for desktops */
+
+@media screen and (min-width : 831px){
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .newscontent{
+        box-sizing: border-box;
+        flex:3;
+        margin-right: 1rem;
+    }
+
+    .sidebar{
+        box-sizing: border-box;
+        flex:1;
+    }
+    
+    .articlebig{
+        width:100%
+    }
+
+    .articlemedium{
+        flex: 2;
+    }
+
+    .articlesmall{
+        flex:1;
+    }
+
+    hr{
+        visibility: hidden;
+     }
+    
+    }
+    
+}
+
